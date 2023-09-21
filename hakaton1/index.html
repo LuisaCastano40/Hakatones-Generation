@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Papeleria</title>
+    <link rel="shortcut icon" href="assets/logo/2.png" type="image/x-icon">
+
+    <!-- Links de los estilos de la página -->
+    <link rel="stylesheet" href="CSS/styles.css"/>
+    <!-- Link de los íconos de boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+  </head>
+
+  <body>
+
+    <!-- Inicio del header de la página -->
+        <header class="hero">
+            <!--Navegación del encabezado-->
+        <nav>
+            <ul class="nav__container" id="inicio">
+                    <img src="assets/logo/2.png" class="card__img">
+                    <h2 class="logo__name"></h2>
+                    <li><a href="#inicio" class="link">inicio</a></li>
+                    <li><a href="#servicios" class="link">servicios</a></li>
+                    <li><a href="#contacto" class="link">contacto</a></li>                    
+                    <i class='bx bx-cart' id="cart"></i> 
+            </ul>
+            <section class="carrito_compras active">
+                <div class="carro_comprar">
+                    <i class='bx bx-x' id="close"></i>
+                    <p class="titulo_carrito">Bienvenido a tu carrito de compras</p>
+
+                    <article class="contenedor-productosCart" id="container-cartProd">
+                    </article>
+
+                    <p class="total" id="total">TOTAL: precio</p>
+                    <button class="boton_carro" id="btn-vaciar">Vaciar carrito</button>
+                </div>  
+            </section>
+        </nav>
+    <!-- Fin del header de la página -->
+
+    <!-- Inicio contenido de la página -->
+        <main>
+            <!-- Sección productos -->
+            <section class="container-cajaColores" id="servicios">
+                <h1>Bienvenidos a caja de colores</h1><br>
+                <p class="container-parrafo">En caja de Colores nuestra misión es proporcionarte lo que necesitas para dar rienda suelta a tu imaginación y llevar tus proyectos al siguiente nivel.</p>
+            </section>
+            <section class="container-productos d-none" id="products">
+                <h2>Nuestros productos</h2>
+            </section>
+            
+        </main>
+    <!-- Fin contenido de la página -->
+
+    <!-- Inicio del pie de página -->
+        <footer class="footer">
+            <div class="container footer__caption" id="contacto">
+                <section class="messageFooter">
+                    <h3 class="title__footer">¡Que tu vida no este a blanco y negro, <span class="title--active">llénalo de color!</span> </h3>
+                </section>
+            </div>
+            <div class="contact">
+                <div class="item__contact">
+                    <i class='bx bx-copyright contact__icon' ></i>
+                    <h3 class="contact__title">La caja de colores</h3>
+                </div>
+                <div class="item__contact">
+                    <i class='bx bx-mail-send contact__icon' ></i>
+                    <h3 class="contact__title">cajadecolores@gmail</h3>
+                </div>
+                <div class="item__contact">
+                    <i class='bx bxs-edit-location contact__icon' ></i>
+                    <h3 class="contact__title">Cajadecolores_</h3>
+                </div>
+                <div class="item__contact item__contact--gold">
+                    <i class='bx bxs-chat contact__icon' ></i>
+                    <h3 class="contact__title">3133662255</h3>
+                </div>
+            </div>
+            <article class="container-copy">
+                Desarrollado por: Luisa Castaño, Sofia Quimbay, Natalia Parra, y Erik Duarte
+            </article>
+        </footer>
+    <!-- Fin del pie de página -->
+
+    <!-- Link del script -->
+    <script type="module" src="JavaScript/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,409 @@
+/* Importamos las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+/*Define una serie de variables de CSS personalizadas*/
+:root {
+    --gold1: rgb(57, 133, 164);
+    --gold2: rgb(66, 68, 155);
+    --gray: rgb(28, 58, 76);
+    --gray2: rgb(150, 198, 200);
+    --black1: rgb(237, 224, 200);
+    --black2: #30353b;
+    /*Definición de sombra con desplazamiento y enfoque*/
+
+    /*arriba, derecha, izquierda y abajo y el último valor siempre hará referencia al difuminado*/
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+/*Condiciones inicciales del css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----------------------HEADER---------------------- */
+
+.hero {
+    width: 100%;
+    /*Altura minima del dispositivo*/
+    min-height: 100vh;
+    /*Establecer un fondo con un degradado lineal
+    linear-gradient(180deg) se encarga de crear un degradado lineal horizontal de izquierda a derecha
+    */
+    background: linear-gradient(180deg, var(--gray2) 0%, var(--black1) 500px);
+}
+.nav__container {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    list-style: none;
+}
+.card__img {
+    /* margin-top: 10%; */
+    margin-left: 0px;
+    padding: 0;
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+.nav__container li{
+    border-bottom: solid var(--gray2);
+}
+.nav__container li:hover{
+    border-bottom: solid var(--gray);
+}
+/* Link servicios  */
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--gray);
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+/* Propiedades del icono de carrito */
+.nav__container i{
+    font-size: 55px;
+    color: white;
+    cursor: pointer;
+}
+.nav{
+    position: relative;
+}
+.carrito_compras{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    position: fixed;
+}
+.active{
+    visibility: hidden;
+}
+.carro_comprar{
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: var(--gray2);
+}
+.carro_comprar i{
+    font-size: 30px;
+    color: var(--gold1);
+    margin: 20px 0px 0 20px;
+    cursor: pointer;
+}
+.titulo_carrito{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--gold2);
+    margin-top: 15px;
+}
+.contenedor-productosCart{
+    width: 80%;
+    height: 70%;
+    background-color:#ffffff99;
+    margin:20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 20px;
+}
+
+.cartProductos{
+    border-bottom: solid rgb(57, 133, 164, 0.3);
+    width: 80%;
+    display: flex;
+    padding-bottom: 10px;
+}
+.producto{
+    display: flex;
+    align-items: center;
+}
+.cart-image{
+   width: 50%;
+}
+.cart-image img{
+    width: 80%;
+}
+.cart-infoProducto{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+.cart-infoProducto span{
+    font-weight: bold;
+    color: var(--gold1);
+    text-transform: uppercase;
+}
+.cart-infoProducto h3{
+    color: var(--gray);
+}
+.cart-infoProducto h4{
+    color: var(--gray);
+}
+.accionesProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accionesProducto i{
+    text-align: center;
+    color: black;
+}
+.cantidad i{
+    color: var(--gold1);
+}
+.cantidad{
+    display: flex;
+    flex-direction: column;
+}
+.cantidad span{
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.total{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.boton_carro{
+    display: block;
+    width: 80%;
+    height: 60px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: var(--gold1);
+    border: solid thin var(--gold1);
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--black1);
+    font-size: 20px;
+}
+
+/* --------------- MAIN-------------- */
+
+/* Sección de título */
+.container-cajaColores{
+    width: 100%;
+    text-align: center;
+    color: var(--gold2);
+    font-size: 35px;
+}
+
+.container-parrafo{
+    width: 100%;
+    text-align: center;
+    color: var(--gray);
+    font-size: 25px;
+}
+
+/* Sección productos */
+.container-productos{
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px 0 50px 0;
+    background-color: #ffffff99;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    /* display: none; */
+}
+.container-productos h2{
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 50px 0;
+    color: var(--gray);
+}
+.cardProductos{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.container-producto{
+    width: 100%;
+    min-height: 380px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--gray2);
+    border-radius: 20px;
+}
+.card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.card-image img{
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.card-infoProducto{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.card-infoProducto span{
+    font-size: 15px; 
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: var(--gold1);
+    font-weight: bold;
+}
+.card-infoProducto h3{
+    font-size: 20px; 
+    box-sizing: border-box;
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.card-infoProducto h4{
+    font-size: 19px; 
+    box-sizing: border-box;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.container-btnAdd{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.btn-agregar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background-color: var(--gray);
+    color: var(--black1);
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.btn-agregar:hover{
+    transform: scale(1.05);
+}
+.btn-agregar i{
+    font-size: 25px;
+}
+
+
+/* --------------- FOOTER-------------- */
+
+.messageFooter{
+    height: 50px;
+}
+/* Tamaño letra footer */
+.title__footer {
+    font-size:33px;
+    margin: 20px 0 40px 0;
+    color: var(--gold2);
+    text-align: center;
+}
+
+.title--active {
+    color: var(--gold1);
+}
+
+/* Posicicion horizontal */
+.contact {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+/* Edicion footer  */
+.item__contact {
+    width: 25%;
+    height: 100px;
+    padding: 150px 0px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--black1) 0%, var(--gray2) 80%);
+}
+
+
+/* iconos de la izquierda footer */
+.contact__icon {
+    font-size: 30px;
+    color: var(--gray);
+    line-height: 26px;
+    margin-right: 4px;
+}
+
+/* tamaño letra mensaje footer  */
+.contact__title {
+    font-size: 30px;
+    line-height: 20px;
+    color: var(--gray);
+    margin-bottom: 0px;
+}
+
+/* Sección de copyright */
+.container-copy{
+    text-align: center;
+    color: var(--black2);
+    font-size: 20px;
+    height: 70px;
+    background: var(--gray2);
+    padding: 30px;
+}
